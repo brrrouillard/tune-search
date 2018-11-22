@@ -1,34 +1,111 @@
-.centered {
-    text-align: center;
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
-    height: 100vh;
-    background-color: #aed581;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #363640;
 }
 
-.main-container {
+section {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.wrapper {
+    width: 500px;
+    background-color: #FFF;
+    opacity: 0.9;
     border-radius: 5px;
-    background-color: #e1ffb1;
-    box-shadow: 0 50px 100px rgba(50,50,93,.05),0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.1);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
-.title {
-    font-size: 3em;
-    letter-spacing: 3px;
+h1 {
+    color: #4CAF50;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
 }
 
-.title::after {
-    content: " ";
-    border: 1.5px solid #aed581;
-    display: block;
-    margin: 0 auto;
-    margin-top: 0.5vh;
-    width: 7vw;
+input[type="search"]{
+    width: 28rem;
+    height: 5.6rem;
+    padding: 0 1.2rem;
+    outline: none;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(54, 54, 64, 0.08);
+    
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+
+    font-size: 2rem;
+    text-align: center;
+    color: #4CAF50;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.04);
 }
 
-.input-section {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+input[type="search"]:focus{
+    border-bottom: 2px solid #4CAF50;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+ }
+
+ ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 5rem 0;
+}
+
+li {
+    color: rgba(0, 0, 0, 0.9);
+	font: 200 2rem Helvetica, Verdana, sans-serif;
+	border-bottom: 1px solid #4CAF50;
+    text-align: center;
+    padding: 1rem 0;
+
+	-webkit-transition: background-color 0.3s ease;
+	-moz-transition: background-color 0.3s ease;
+	-o-transition: background-color 0.3s ease;
+	-ms-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    
+    cursor: pointer;
+}
+
+li:last-child {
+	border: none;
 }
